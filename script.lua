@@ -37,6 +37,7 @@ end)
 Player.ChildAdded:Connect(function(p)
     if p.Name == 'SavingData' then
         saves = saves + 1
+        print('saving..')
     end
 end)
 
