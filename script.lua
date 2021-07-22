@@ -134,7 +134,7 @@ while Working do
             lasttp_hits = 0
             lasthit = 0
         end
-        if lasttp_hits + 3 <= Player_Character.Config.Hits.Value and (Player_Character.HumanoidRootPart.Position - workspace[Player.Name.."'s Shadow Image"].HumanoidRootPart.Position).Magnitude > 20 then
+        if lasttp_hits + 2 <= Player_Character.Config.Hits.Value and (Player_Character.HumanoidRootPart.Position - workspace[Player.Name.."'s Shadow Image"].HumanoidRootPart.Position).Magnitude > 20 then
             lasttp_hits = Player_Character.Config.Hits.Value
             Player_Character.Client.Events['Zenkai Vanish']:FireServer("SecretCode")
         end    
