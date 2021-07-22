@@ -29,11 +29,19 @@ local Working = true
 local lasttp_hits = 0
 local total_hits = 0
 local lasthit = 0
+local saves = 0
 Player.CharacterRemoving:Connect(function()
     Working = false
 end)
+
+Player.ChildAdded:Connect(function(p)
+    if p.Name == 'SavingData' then
+        saves = saves + 1
+    end
+end)
+
 spawn(function() -- Bugs executor
-    for _=1,6000 do    
+    for _=1,600 do    
         wait(.1)
         if not Working then
             break        
@@ -50,7 +58,13 @@ spawn(function() -- Bugs executor
     end
     
     Working = false
-    wait(7)
+    local prevs_saves = saves
+    
+    for _=1,120 do
+        wait(1)
+        if prevs_saves ~= saves then break end
+    end
+    wait(3)
     game:GetService('TeleportService'):Teleport(6846666260, game.Players.LocalPlayer)
     discord_hook("End session with BP: "..Player_Character.Config.BattlePower.Value)
     console_print('Making new session...\n','@@LIGHT_GREEN@@')
