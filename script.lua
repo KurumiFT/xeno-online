@@ -76,7 +76,7 @@ for i,v in pairs(workspace:GetDescendants()) do
 end
 local part = Instance.new('Part',workspace)
 part.Anchored = true
-part.Size = Vector3.new(10000,10000,10000)
+part.Size = Vector3.new(20000,10000,20000)
 part.Position = Vector3.new(0,-5000,0)
 
 Player_Character.Config.CurrentTarget.Value = workspace[Player.Name.."'s Shadow Image"]
