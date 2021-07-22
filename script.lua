@@ -82,7 +82,7 @@ spawn(function()
     while RunService.Heartbeat:Wait() and Working do
         if not Player_Character then break end
         if Player_Character:FindFirstChild('HumanoidRootPart') then
-            part.CFrame = Vector3.new(Player_Character.HumanoidRootPart.CFrame.X,-500,Player_Character.HumanoidRootPart.CFrame.Z)
+            part.Position = Vector3.new(Player_Character.HumanoidRootPart.CFrame.X,-500,Player_Character.HumanoidRootPart.CFrame.Z)
         end
     end
 end)
