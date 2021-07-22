@@ -40,8 +40,6 @@ spawn(function() -- Bugs executor
         end
         
         if Player_Character then
-            if Player_Character.Humanoid.Health <= 10 then break end
-            
             if Player_Character:FindFirstChild('HumanoidRootPart') then
                 if Player_Character.HumanoidRootPart.CFrame.Y <= -250 then break end
                 if Player_Character.HumanoidRootPart.Anchored then
