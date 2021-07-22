@@ -66,6 +66,11 @@ end)
 console_print('Player spawned!\n','@@GREEN@@')
 console_print('Your BP now: ','@@MAGENTA@@')
 console_print(Player.Character.Config.BattlePower.Value.."\n",'@@LIGHT_GRAY@@')
+Player_Character.Config.Flying.Value = true
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.Position = Vector3.new(0,5000,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+wait(1)
 Player_Character.Client.Events['Shadow Spar']:FireServer("SecretCode")
 workspace:WaitForChild(Player.Name.."'s Shadow Image"):WaitForChild('HumanoidRootPart')
 console_print('Shadow clone spawned!\n','@@LIGHT_GREEN@@')
@@ -90,7 +95,6 @@ end)
 
 Player_Character.Config.CurrentTarget.Value = workspace[Player.Name.."'s Shadow Image"]
 Player_Character.Config.LockedOn.Value = true
-Player_Character.Config.Flying.Value = true
 
 local function discord_hook(text)
     if not _G.Webhook then return end
