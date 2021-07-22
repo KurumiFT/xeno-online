@@ -50,6 +50,7 @@ spawn(function() -- Bugs executor
     end
     
     Working = false
+    wait(7)
     game:GetService('TeleportService'):Teleport(6846666260, game.Players.LocalPlayer)
     discord_hook("End session with BP: "..Player_Character.Config.BattlePower.Value)
     console_print('Making new session...\n','@@LIGHT_GREEN@@')
