@@ -76,8 +76,16 @@ for i,v in pairs(workspace:GetDescendants()) do
 end
 local part = Instance.new('Part',workspace)
 part.Anchored = true
-part.Size = Vector3.new(20000,10000,20000)
-part.Position = Vector3.new(0,-5000,0)
+part.Size = Vector3.new(1000,1000,1000)
+part.Position = Vector3.new(0,-500,0)
+spawn(function()
+    while RunService.Heartbeat:Wait() and Working do
+        if not Player_Character then break end
+        if Player_Character:FindFirstChild('HumanoidRootPart') then
+            part.CFrame = Vector3.new(Player_Character.HumanoidRootPart.CFrame.X,-500,Player_Character.HumanoidRootPart.CFrame.Z)
+        end
+    end
+end)
 
 Player_Character.Config.CurrentTarget.Value = workspace[Player.Name.."'s Shadow Image"]
 Player_Character.Config.LockedOn.Value = true
