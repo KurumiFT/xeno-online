@@ -34,13 +34,6 @@ Player.CharacterRemoving:Connect(function()
     Working = false
 end)
 
-Player.ChildAdded:Connect(function(p)
-    if p.Name == 'SavingData' then
-        saves = saves + 1
-        print('saving..')
-    end
-end)
-
 spawn(function() -- Bugs executor
     for _=1,600 do    
         wait(.1)
@@ -59,12 +52,7 @@ spawn(function() -- Bugs executor
     end
     
     Working = false
-    local prevs_saves = saves
     
-    for _=1,120 do
-        wait(1)
-        if prevs_saves ~= saves then break end
-    end
     wait(3)
     game:GetService('TeleportService'):Teleport(6846666260, game.Players.LocalPlayer)
     discord_hook("End session with BP: "..Player_Character.Config.BattlePower.Value)
