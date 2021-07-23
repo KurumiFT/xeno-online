@@ -35,7 +35,7 @@ Player.CharacterRemoving:Connect(function()
 end)
 
 spawn(function() -- Bugs executor
-    for _=1,6000 do    
+    for _=1,12000 do    
         wait(.1)
         if not Working then
             break        
@@ -138,6 +138,7 @@ while Working do
             console_print('Your BP now: '..Player.Character.Config.BattlePower.Value..'\n','@@LIGHT_MAGENTA@@')
             discord_hook("BP updated: "..Player_Character.Config.BattlePower.Value)
         end
+        print('totalhits')
         if Player_Character.Config.Hits.Value == 0 then
             lasttp_hits = 0
             lasthit = 0
@@ -146,6 +147,7 @@ while Working do
             lasttp_hits = Player_Character.Config.Hits.Value
             Player_Character.Client.Events['Zenkai Vanish']:FireServer("SecretCode")
         end    
+        print('lasthits')
         Player_Character.Client.Events.LightAttack:FireServer("SecretCode")
         Player_Character.Client.Events.Block:InvokeServer()
 end
