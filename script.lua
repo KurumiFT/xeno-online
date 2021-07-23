@@ -29,13 +29,13 @@ local Working = true
 local lasttp_hits = 0
 local total_hits = 0
 local lasthit = 0
-local saves = 0
+
 Player.CharacterRemoving:Connect(function()
     Working = false
 end)
 
 spawn(function() -- Bugs executor
-    for _=1,600 do    
+    for _=1,6000 do    
         wait(.1)
         if not Working then
             break        
