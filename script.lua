@@ -142,14 +142,11 @@ while Working do
         if Player_Character.Config.Hits.Value == 0 then
             lasttp_hits = 0
             lasthit = 0
-        end
-        if lasttp_hits + 2 <= Player_Character.Config.Hits.Value and (Player_Character.HumanoidRootPart.Position - workspace[Player.Name.."'s Shadow Image"].HumanoidRootPart.Position).Magnitude > 20 then
-            lasttp_hits = Player_Character.Config.Hits.Value
-            Player_Character.Client.Events['Zenkai Vanish']:FireServer("SecretCode")
-        end    
+        end 
         print('lasthits')
         Player_Character.Client.Events.LightAttack:FireServer("SecretCode")
         Player_Character.Client.Events.Block:InvokeServer()
+        Player_Character.Client.Events['Zenkai Vanish']:FireServer("SecretCode")
 end
 
 Working = false
