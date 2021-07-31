@@ -17,7 +17,7 @@ if game.PlaceId ~= 6846666260 then
     script.Disabled = true 
 end
 
-wait(1)
+wait(3)
 local Player = game.Players.LocalPlayer
 local Player_Character = workspace:WaitForChild(Player.Name)
 Player_Character:WaitForChild('Config')
