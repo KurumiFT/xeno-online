@@ -85,6 +85,11 @@ local function get_lf()
     local LifeForce = tonumber(string.split(MainFrame.LongevityLabel.Text," ")[3])
     return LifeForce
 end
+for i,v in pairs(workspace:GetDescendants()) do
+        if v:IsA("BasePart") then
+            v.CanCollide = false
+        end
+end
 
 console_print('Your BP now: ','@@MAGENTA@@')
 console_print(Player.Character.Config.BattlePower.Value.."\n",'@@LIGHT_GRAY@@')
