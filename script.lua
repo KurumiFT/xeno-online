@@ -164,10 +164,12 @@ if get_lf() >= 10 then
                 lasttp_hits = 0
                 lasthit = 0
             end 
+            Player_Character.Client.Events.Block:InvokeServer()
             Player_Character.Config.Stunned.Value = false
             Player_Character.Config.Attacking.Value = false
             Player_Character.Config.FullyStunned.Value = false
             Player_Character.Config.CAttackCooldown.Value = false
+            Player_Character.Config.Blocking.Value = false
             Player_Character.Client.Events.LightAttack:FireServer("SecretCode")
             Player_Character.Client.Events['Zenkai Vanish']:FireServer("SecretCode")
     end
