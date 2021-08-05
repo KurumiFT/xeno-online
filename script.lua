@@ -89,7 +89,7 @@ end
 console_print('Your BP now: ','@@MAGENTA@@')
 console_print(Player.Character.Config.BattlePower.Value.."\n",'@@LIGHT_GRAY@@')
 wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.Position = Vector3.new(0,20000,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.Position = Vector3.new(10000,30000,10000)
 game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
 wait(5)
 if get_lf() < 10 then
