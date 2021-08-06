@@ -1,3 +1,4 @@
+wait(3) 
 local function console_print(text,color)
     rconsoleprint(color)
     rconsoleprint(text)
