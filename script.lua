@@ -99,6 +99,8 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.FlyingPosition.MaxForce = Ve
 wait(5)
 if get_lf() < 10 then
     Player_Character.Client.Events.Rest:FireServer()
+    wait(3)
+    if not Player_Character.Config.FullyStunned.Value then Player_Character.Client.Events.Rest:FireServer() end
     repeat
         wait()
     until Player_Character.Config.FullyStunned.Value
